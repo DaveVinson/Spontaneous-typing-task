@@ -1,6 +1,6 @@
 ***************************************************************************************
 ***************************************************************************************
-******** Implied motion language can influence visual spatial memory ******************
+******** Statistics at the finger tips: Typing reveals word predictability ************
 ****************** All files were written by David W. Vinson **************************
 ***************** PLEASE DO NOT DISTRIBUTE WITHOUT PERMISSION *************************
 ***************************************************************************************
