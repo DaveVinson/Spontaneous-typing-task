@@ -1,1 +1,26 @@
-README
+***************************************************************************************
+***************************************************************************************
+******** Statistics in the Fingertips: Typing RevealsWord Predictability **************
+************ All files were written by David W. Vinson & Rick Dale ********************
+***************** PLEASE DO NOT DISTRIBUTE WITHOUT PERMISSION *************************
+***************************************************************************************
+***************************************************************************************
+
+------------------------------ 
+-------- Included ------------
+Experiment: “plot-summary”: All source files (.js,.html, .php), all content files
+Analysis: “0-master-script.R” and all analysis files
+Data: "data" folder and code to clean data in R
+Manuscript: “Manuscript.pdf” The current version of the manuscript has been submitted to Cognition. 
+This README
+------------------------------ 
+------------------------------ 
+
+The “plot-summary” folder contains the experimental setup and designed used to run this study. You can see this in action here: davevinson.com/exp/plot-summary/ 
+
+
+The "data" folder contains the main experiment as well as replication experiments at different times and from different participant pools (e.g., a university participant pool, and a more general Amazon Turk participant pool). included are three .R files that are used to “clean” and “generate” the cleaned data files used for the final analysis. 
+
+The “Analysis” folder contains all files used to analyze the data in “data”. You will need to reroute the “root folder” in “0-master-script.R” to the appropriate data file you wish to analyze.
+
+For any questions, or comments please email me: dave@davevinson.com

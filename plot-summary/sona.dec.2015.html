@@ -1,0 +1,85 @@
+<html>
+<head>
+<link rel="stylesheet" href="emailStyle.css" type="text/css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+<script src="http://momentjs.com/downloads/moment.js"></script>
+<link rel="stylesheet" href="skeleton/css/normalize.css">
+<link rel="stylesheet" href="skeleton/css/skeleton.css">
+<link rel="stylesheet" href="css/font-awesome-4.4.0/css/font-awesome.min.css">
+<link href='//fonts.googleapis.com/css?family=Raleway:400,300,600' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<br /><br />
+<div id="basic-grey-demo">
+<div class="container">
+<div class="row">
+<div class="one-half column">
+	<h4>Typing Task</h4>
+	<span><small>
+	Please use an updated Chrome, Firefox, or Safari browser for this task.<br /><br />
+
+	Thank you for participating. Here's the task. Please provide a detailed summary of your favorite movie's plot. In order to get 0.5 credits, please type enough to fill the textbox to the right. Thanks!<br /><br />
+
+	When you click "Complete the Task", we will debrief you. <br /><br />
+
+	<b>Important note for this task</b>: Note that the "Content" box does not permit use of the mouse, also please don't copy and paste any text in this box or use your arrow keys at all -- we are seeking data on continuous text typing.<br /><Br />
+
+	Type away. Thank you for your help!
+
+	</small></span>
+</div>
+<div class="one-half column" id="debriefer">
+<form action="display.php" method="post" class="basic-grey">
+	<label>
+		<span>Your SONA ID:</span>
+		<input type="email" id="email" name="email" placeholder="SONA ID" />
+	</label>
+	<label>
+		<span>Movie title:</span>
+		<input type="text" id="category" name="category" placeholder="Title" />
+	</label> 
+	<label>
+		<span>Content:</span>
+		<textarea id="content" name="content" placeholder="Summarize the plot here"></textarea>
+	</label> 
+	 <label>
+		<span>&nbsp;</span> 
+		<input type="button" class="button saveButton" id="saveButton"
+			data-clipboard-action="copy" data-clipboard-target="#content"
+			value="Complete the Task" /> 
+	</label>
+</form>
+</div>
+</div>
+</div>
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="dynamic-keys.js"></script>
+
+<script>
+
+var printClean = 0;
+makeLogBox("content");
+$("#saveButton").click(function() {
+	dataBlob = saveData();
+	sendData(dataBlob);
+	$('#saveButton').css("backgroundColor","blue");
+	$('#saveButton').css("color","white");
+	$('#content').prop("disabled",true);
+	$('#saveButton').prop("disabled",true);
+	$('#saveButton').val('Content saved, thanks!');
+	blinkScreen();
+	$("#debriefer").append("Explanation of this experiment: We are interested in patterns of typing, and how words that are higher in frequency (such as 'the') may lead to much faster typing speed and confidence compared to less common words (such as the name of a film's actor, much less common than 'the'). Your text content will be combined with lots of other texts to analyze these typing patterns and how language structure affects them. Thank you! If you have any questions, feel free to contact Rick Dale (rdale@ucmerced.edu) or David Vinson (dvinson@ucmerced.edu).");
+});
+
+
+// credits: https://zenorocha.github.io/clipboard.js/
+
+</script>
+
+</body>
+</html>
+
